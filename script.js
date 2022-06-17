@@ -150,7 +150,6 @@ mainProjectButton.textContent = 'See Project';
 projectData[0].technologies.forEach((element) => {
   const mainProjectLi = document.createElement('li');
   mainProjectUl.appendChild(mainProjectLi);
-  mainProjectLi.textContent = element;
 });
 
 // -- Other Projects -- //
@@ -285,7 +284,6 @@ function createPopUp(event) {
   projectData[projectButtonId].technologies.forEach((element) => {
     const projectLi = document.createElement('li');
     projectUl.appendChild(projectLi);
-    projectLi.textContent = element;
   });
 
   // close item
@@ -313,7 +311,7 @@ addButton.forEach((btn) => {
 function warningMessage(input, message, type) {
   const messageContent = input.parentNode.parentNode.querySelector('.warningMessage');
   messageContent.innerText = message;
-  input.parentNode.className = type ? 'sucess' : 'error';
+  input.parentNode.className = type ? 'error' : 'error';
   return type;
 }
 
